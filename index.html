@@ -1,1 +1,752 @@
-<h1>Rin Magic Test ✨</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI活用ポートフォリオ｜和知 愛美</title>
+  <meta
+    name="description"
+    content="生成AIを活用した課題整理・思考の構造化・業務改善・リサーチ・資料化のポートフォリオ"
+  />
+
+  <style>
+    :root{
+      --navy:#17345f;
+      --blue:#315e9b;
+      --blue-soft:#eaf3fb;
+      --blue-soft-2:#f4f8fc;
+      --ink:#1d2a38;
+      --muted:#617184;
+      --line:#dbe5ef;
+      --white:#ffffff;
+      --shadow:0 18px 50px rgba(24, 53, 95, 0.08);
+      --radius:24px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Sans",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, #edf6ff 0, transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f7fbff 55%, #ffffff 100%);
+      line-height:1.8;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(1120px, calc(100% - 32px));
+      margin:auto;
+    }
+
+    .hero{
+      padding:88px 0 56px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.25fr 0.75fr;
+      gap:32px;
+      align-items:stretch;
+    }
+
+    .hero-main,
+    .hero-side,
+    .panel,
+    .case-card,
+    .tool-card,
+    .qualification-card{
+      background:rgba(255,255,255,0.92);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+
+    .hero-main{
+      padding:48px;
+    }
+
+    .hero-side{
+      padding:32px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      background:linear-gradient(145deg, #edf6ff, #ffffff);
+    }
+
+    .eyebrow{
+      margin:0 0 12px;
+      color:var(--blue);
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(40px, 6vw, 76px);
+      line-height:1.05;
+      letter-spacing:-0.04em;
+    }
+
+    .name{
+      margin:18px 0 8px;
+      font-size:22px;
+      font-weight:800;
+    }
+
+    .lead{
+      margin:20px 0 0;
+      font-size:18px;
+      color:var(--muted);
+      max-width:760px;
+    }
+
+    .tagline{
+      color:var(--navy);
+      font-size:24px;
+      line-height:1.5;
+      font-weight:800;
+      margin:0 0 16px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 13px;
+      border-radius:999px;
+      background:var(--blue-soft);
+      color:var(--navy);
+      font-size:14px;
+      font-weight:700;
+      border:1px solid #d5e6f6;
+    }
+
+    section{
+      padding:34px 0;
+    }
+
+    .section-head{
+      margin-bottom:22px;
+    }
+
+    .section-kicker{
+      font-size:13px;
+      color:var(--blue);
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+
+    h2{
+      margin:0;
+      font-size:clamp(28px, 4vw, 42px);
+      color:var(--navy);
+      letter-spacing:-0.03em;
+    }
+
+    h3{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:21px;
+    }
+
+    .panel{
+      padding:34px;
+    }
+
+    .principle{
+      font-size:24px;
+      font-weight:900;
+      color:var(--navy);
+      margin:0;
+    }
+
+    .flow{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .flow-step{
+      min-height:142px;
+      padding:20px 16px;
+      border-radius:20px;
+      background:linear-gradient(180deg,#f1f7fd,#ffffff);
+      border:1px solid var(--line);
+    }
+
+    .flow-num{
+      display:inline-grid;
+      place-items:center;
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      background:var(--navy);
+      color:white;
+      font-weight:900;
+      margin-bottom:14px;
+    }
+
+    .flow-step strong{
+      display:block;
+      color:var(--navy);
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .cases{
+      display:grid;
+      gap:28px;
+    }
+
+    .case-card{
+      padding:34px;
+    }
+
+    .case-label{
+      color:var(--blue);
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      margin-bottom:6px;
+    }
+
+    .case-title{
+      margin:0;
+      font-size:30px;
+      color:var(--navy);
+      letter-spacing:-0.02em;
+    }
+
+    .case-sub{
+      margin:8px 0 24px;
+      color:var(--muted);
+    }
+
+    .case-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .mini{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      background:#fff;
+    }
+
+    .mini p{
+      margin:0;
+    }
+
+    .human-role{
+      margin-top:18px;
+      background:var(--blue-soft);
+      border:1px solid #d4e7f7;
+      border-radius:20px;
+      padding:24px;
+    }
+
+    .human-role strong{
+      display:block;
+      color:var(--navy);
+      font-size:20px;
+      margin-bottom:6px;
+    }
+
+    .question-box{
+      margin-top:18px;
+      padding:24px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#17345f,#315e9b);
+      color:white;
+    }
+
+    .question-box p{
+      margin:0;
+      font-size:20px;
+      font-weight:800;
+    }
+
+    .tool-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .tool-card{
+      padding:24px;
+      box-shadow:none;
+    }
+
+    .tool-name{
+      font-size:18px;
+      font-weight:900;
+      color:var(--navy);
+      margin-bottom:4px;
+    }
+
+    .tools-list{
+      margin:20px 0 0;
+      font-weight:800;
+      color:var(--navy);
+      line-height:2;
+    }
+
+    .checks{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .check{
+      padding:18px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:white;
+      font-weight:800;
+    }
+
+    .qualification-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .qualification-card{
+      padding:24px;
+      box-shadow:none;
+    }
+
+    footer{
+      padding:40px 0 64px;
+      color:var(--muted);
+      text-align:center;
+      font-size:14px;
+    }
+
+    .magic{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:12px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:#eef6fd;
+      color:var(--navy);
+      font-weight:800;
+      border:1px solid var(--line);
+    }
+
+    @media(max-width:900px){
+      .hero{
+        padding-top:42px;
+      }
+
+      .hero-grid,
+      .case-grid,
+      .tool-grid,
+      .qualification-grid{
+        grid-template-columns:1fr;
+      }
+
+      .flow{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .flow-step:last-child{
+        grid-column:1 / -1;
+      }
+
+      .hero-main{
+        padding:32px 26px;
+      }
+    }
+
+    @media(max-width:560px){
+      .wrap{
+        width:min(100% - 20px,1120px);
+      }
+
+      .flow,
+      .checks{
+        grid-template-columns:1fr;
+      }
+
+      .flow-step:last-child{
+        grid-column:auto;
+      }
+
+      .panel,
+      .case-card,
+      .hero-side{
+        padding:24px;
+      }
+
+      .hero-main{
+        padding:28px 22px;
+      }
+
+      .case-title{
+        font-size:25px;
+      }
+
+      .lead{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">AI UTILIZATION PORTFOLIO</p>
+        <h1>AI活用<br>ポートフォリオ</h1>
+        <p class="name">和知 愛美</p>
+        <p class="lead">
+          生成AIを、単に回答を得るためのツールではなく、
+          課題整理・仮説検証・情報収集・資料化を支援する
+          「協働ツール」として日常的に活用しています。
+        </p>
+
+        <div class="chips">
+          <span class="chip">課題整理</span>
+          <span class="chip">思考の構造化</span>
+          <span class="chip">業務改善</span>
+          <span class="chip">リサーチ</span>
+          <span class="chip">資料化</span>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <p class="tagline">
+          AIの回答を、そのまま「正解」にしない。
+        </p>
+        <p>
+          現場で得た一次情報や自身の観察を起点に、
+          AIとの壁打ちや複数モデルでの比較検討を行いながら、
+          最終的な判断・修正・目的設定は自分で行います。
+        </p>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">WORK STYLE</div>
+          <h2>私のAI活用スタイル</h2>
+        </div>
+
+        <div class="panel">
+          <p class="principle">
+            人間の一次情報と判断を中心に、AIを思考支援へ組み込む
+          </p>
+
+          <div class="flow">
+            <div class="flow-step">
+              <div class="flow-num">01</div>
+              <strong>課題を整理</strong>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-num">02</div>
+              <strong>AIと壁打ち</strong>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-num">03</div>
+              <strong>複数AIで比較・調査</strong>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-num">04</div>
+              <strong>人間が検討・修正</strong>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-num">05</div>
+              <strong>OUTPUT</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">CASE STUDIES</div>
+          <h2>AI活用事例</h2>
+        </div>
+
+        <div class="cases">
+
+          <article class="case-card">
+            <div class="case-label">CASE 01</div>
+            <h3 class="case-title">物流現場の業務改善・新人支援</h3>
+            <p class="case-sub">
+              現場経験を一次情報に、課題整理から資料化までをAIと協働
+            </p>
+
+            <div class="case-grid">
+              <div class="mini">
+                <h3>課題</h3>
+                <p>
+                  作業の全体像や判断基準が、新人へ共有されにくい状態を現場経験から認識。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>AI活用</h3>
+                <p>
+                  自身の経験・観察を一次情報としてAIへ渡し、
+                  問題構造や認識差を整理。
+                  改善策の壁打ちや資料構成に活用。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>OUTPUT</h3>
+                <p>
+                  新人向けガイド、現場課題整理、
+                  業務改善提案、ワークデザイン改善案、会議用資料。
+                </p>
+              </div>
+            </div>
+
+            <div class="human-role">
+              <strong>私が担ったこと</strong>
+              出力を読む側ではなく、
+              課題の定義・問いの立て方・採否・修正・資料の目的と読み手を決める側を担当。
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-label">CASE 02</div>
+            <h3 class="case-title">横浜港大さん橋 改善提案</h3>
+            <p class="case-sub">
+              現地観察とモニター活動を起点に、複数AIで仮説を検討
+            </p>
+
+            <div class="case-grid">
+              <div class="mini">
+                <h3>観察・課題</h3>
+                <p>
+                  強いブランドを持ちながら、
+                  単独目的地としての価値やターゲット像が曖昧なのではないかと仮説化。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>AI活用</h3>
+                <p>
+                  公開情報の調査、仮説の壁打ち、
+                  複数視点からの比較検討に複数AIを活用。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>私の判断</h3>
+                <p>
+                  現地実感との照合、
+                  採用する論点・施策の判断、
+                  提案の方向性決定を担当。
+                </p>
+              </div>
+            </div>
+
+            <div class="human-role">
+              <strong>提案の核</strong>
+              来場者自身の言葉を収集し、
+              自然に形成されているターゲット像を可視化する。
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-label">CASE 03</div>
+            <h3 class="case-title">生成AIを活用した独学</h3>
+            <p class="case-sub">
+              参考書と生成AIを組み合わせ、理解・確認・弱点整理を反復
+            </p>
+
+            <div class="case-grid">
+              <div class="mini">
+                <h3>学習方法</h3>
+                <p>
+                  参考書で学び、
+                  理解が曖昧な箇所をAIとの対話で補強。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>AI活用</h3>
+                <p>
+                  概念説明、言い換え、練習問題、
+                  誤答理由、類似概念との違いの確認に活用。
+                </p>
+              </div>
+
+              <div class="mini">
+                <h3>結果</h3>
+                <p>
+                  UX検定 基礎、
+                  生成AIパスポートを取得。
+                </p>
+              </div>
+            </div>
+
+            <div class="question-box">
+              <p>
+                「なぜそうなる？」<br>
+                「別の例なら？」<br>
+                「似た概念との違いは？」
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">AI TOOLKIT</div>
+          <h2>目的に応じて、複数AIを使い分ける</h2>
+        </div>
+
+        <div class="panel">
+          <div class="tools-list">
+            ChatGPT / Gemini / Claude / Grok / Genspark / Microsoft Copilot / Perplexity
+          </div>
+
+          <div class="tools-list" style="font-weight:600;color:var(--muted)">
+            Notion / Gamma / Microsoft Word / Excel / PowerPoint / Google Workspace
+          </div>
+
+          <div class="tool-grid">
+            <div class="tool-card">
+              <div class="tool-name">比較する</div>
+              同じテーマを複数AIへ投げ、
+              視点・情報の優先順位・構造・表現の違いを確認。
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-name">構造化する</div>
+              散らばった情報を整理し、
+              相手が短時間で理解・判断できる形へ組み替える。
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-name">仕組みにする</div>
+              AI業務日報、作業手順ナレッジ、
+              現場メモ、新人支援など、
+              業務への組み込みを検討。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">PRINCIPLE</div>
+          <h2>AIの回答を、そのまま正解にしない</h2>
+        </div>
+
+        <div class="panel">
+          <p>
+            AIを使うときは、出力の自然さだけで判断せず、
+            前提・目的・一次情報・代替案との整合を確認します。
+          </p>
+
+          <div class="checks">
+            <div class="check">✓ 目的と合っているか</div>
+            <div class="check">✓ 前提に間違いはないか</div>
+            <div class="check">✓ 論理が飛躍していないか</div>
+            <div class="check">✓ 別の可能性はないか</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">QUALIFICATIONS</div>
+          <h2>資格・学習</h2>
+        </div>
+
+        <div class="qualification-grid">
+          <div class="qualification-card">
+            <h3>UX検定 基礎</h3>
+            <p>
+              UX・HCDの基礎理解を、
+              参考書と生成AIを組み合わせて学習。
+            </p>
+          </div>
+
+          <div class="qualification-card">
+            <h3>生成AIパスポート</h3>
+            <p>
+              生成AIの基礎知識、リスク、
+              活用時の考え方を学習。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>AI活用ポートフォリオ｜和知 愛美</div>
+      <div class="magic">Rin Magic Test → Portfolio ✨</div>
+    </div>
+  </footer>
+
+</body>
+</html>
